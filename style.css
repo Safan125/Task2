@@ -1,0 +1,104 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    height: 80vh;
+    position: relative;
+}
+
+/* Small screens */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 970px) {
+    .container {
+        width: 955px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.container .slide{
+    display: none;
+}
+.container .slide img{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.container .slide{
+    margin: 0;
+    padding: 0;
+}
+.dots{
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    height: 30px;
+    bottom: 15px;
+    left: 51%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+.dot{
+    height: 20px;
+    display: inline-block;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #c2c0c0;
+    margin: 0 2px;
+    transition-duration: 0.2s;
+}
+/* Navigation buttons */
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+    transition-duration: 0.2s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.dot:hover, .active{
+    background-color: chocolate;
+}
