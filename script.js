@@ -25,6 +25,10 @@ function Slide(n){
     displayimg(currentIMG+=n);
 }
 // Touch event handling
+const autoslide= setInterval(()=>{
+Slide(1);
+},3000)
+
 let startX = 0;
 
 function handleTouchStart(e) {
@@ -41,5 +45,5 @@ function handleTouchEnd(e) {
 }
 
 // Add touch event listeners to the slider container
-document.querySelector(".slider-container").addEventListener("touchstart", handleTouchStart);
-document.querySelector(".slider-container").addEventListener("touchend", handleTouchEnd);
+document.querySelector(".container").addEventListener("touchstart", handleTouchStart);
+document.querySelector(".container").addEventListener("touchend", handleTouchEnd);
